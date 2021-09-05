@@ -1,0 +1,16 @@
+<h1>Form</h1>
+
+<form [formGroup]="signupForm" (ngSubmit)="submit()">
+  <app-profile-form formControlName="profile"></app-profile-form>
+  
+  <button>Submit</button>
+  <button type="button" (click)="resetForm()">Reset</button>
+</form>
+
+<p>
+  Form is {{signupForm.valid ? 'Valid' : 'Invalid'}}
+</p>
+
+<pre>
+{{signupForm.value | json}}
+</pre>
